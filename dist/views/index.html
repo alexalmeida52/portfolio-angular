@@ -1,0 +1,144 @@
+<!DOCTYPE html><html lang="pt-br"><head>
+    <base href="/">
+    <!--====== Required meta tags ======-->
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="Olá, me chamo Alex. Sou um desenvolvedor web e mobile, graduando Tecnologia da Informação na UFRN. Além disso, tenho o título de Técnico em Informática concedido pelo IFRN. Tags: alx52, alex almeida, alex alves, alex programador, natal, ufrn programador, programador, full stack">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.dev.js"></script>
+     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+     <script>
+          $( document ).ready(function() {
+        // Handler for .ready() called.
+            
+            var socket = io('http://alexalves.herokuapp.com/');
+            socket.on('visitas', function(visitas){
+                console.log(visitas);
+                $('#visitas').text('Total de visitas: '+visitas);
+            });
+        });
+     </script>
+    <!--====== Title ======-->
+    <title>Alex - Desenvolvedor Full Stack</title>
+
+    <!--====== Favicon Icon ======-->
+    <link rel="shortcut icon" href="https://cdn.iconscout.com/icon/free/png-256/react-native-1-555609.png" type="image/png">
+
+    <!--====== Bootstrap css ======-->
+    <style>:root{--blue:#007bff;--indigo:#6610f2;--purple:#6f42c1;--pink:#e83e8c;--red:#dc3545;--orange:#fd7e14;--yellow:#ffc107;--green:#28a745;--teal:#20c997;--cyan:#17a2b8;--white:#fff;--gray:#6c757d;--gray-dark:#343a40;--primary:#007bff;--secondary:#6c757d;--success:#28a745;--info:#17a2b8;--warning:#ffc107;--danger:#dc3545;--light:#f8f9fa;--dark:#343a40;--breakpoint-xs:0;--breakpoint-sm:576px;--breakpoint-md:768px;--breakpoint-lg:992px;--breakpoint-xl:1200px;--font-family-sans-serif:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";--font-family-monospace:SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace}*,::after,::before{box-sizing:border-box}html{font-family:sans-serif;line-height:1.15;-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:transparent}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";font-size:1rem;font-weight:400;line-height:1.5;color:#212529;text-align:left;background-color:#fff}a{color:#007bff;text-decoration:none;background-color:transparent}a:hover{color:#0056b3;text-decoration:underline}@-webkit-keyframes progress-bar-stripes{from{background-position:1rem 0}to{background-position:0 0}}@-webkit-keyframes spinner-border{to{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@-webkit-keyframes spinner-grow{0%{-webkit-transform:scale(0);transform:scale(0)}50%{opacity:1}}@media print{*,::after,::before{text-shadow:none!important;box-shadow:none!important}a:not(.btn){text-decoration:underline}@page{size:a3}body{min-width:992px!important}}</style><link rel="stylesheet" href="assets/css/bootstrap.min.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="assets/css/bootstrap.min.css"></noscript>
+
+    <!--====== Line Icons css ======-->
+    <style>@font-face{font-family:'LineIcons';src:url('../fonts/LineIcons.eot?y2l643');src:url('../fonts/LineIcons.eot?y2l643#iefix') format('embedded-opentype'),
+    url('../fonts/LineIcons.ttf?y2l643') format('truetype'),
+    url('../fonts/LineIcons.woff?y2l643') format('woff'),
+    url('../fonts/LineIcons.svg?y2l643#LineIcons') format('svg');font-weight:normal;font-style:normal}[class^="lni-"]{font-family:'LineIcons' !important;speak:none;font-style:normal;font-weight:normal;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.lni-chevron-up:before{content:"\ea43"}@-webkit-keyframes spin{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(359deg);transform:rotate(359deg)}}@-webkit-keyframes burst{0%{-webkit-transform:scale(1);transform:scale(1);opacity:1}90%{-webkit-transform:scale(1.5);transform:scale(1.5);opacity:0}}@-webkit-keyframes flashing{0%{opacity:1}45%{opacity:0}90%{opacity:1}}@-webkit-keyframes fade-left{0%{-webkit-transform:translateX(0);transform:translateX(0);opacity:1}75%{-webkit-transform:translateX(-20px);transform:translateX(-20px);opacity:0}}@-webkit-keyframes fade-right{0%{-webkit-transform:translateX(0);transform:translateX(0);opacity:1}75%{-webkit-transform:translateX(20px);transform:translateX(20px);opacity:0}}@-webkit-keyframes fade-up{0%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}75%{-webkit-transform:translateY(-20px);transform:translateY(-20px);opacity:0}}@-webkit-keyframes fade-down{0%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}75%{-webkit-transform:translateY(20px);transform:translateY(20px);opacity:0}}@-webkit-keyframes tada{from{-webkit-transform:scale3d(1, 1, 1);transform:scale3d(1, 1, 1)}10%,20%{-webkit-transform:scale3d(.95, .95, .95) rotate3d(0, 0, 1, -10deg);transform:scale3d(.95, .95, .95) rotate3d(0, 0, 1, -10deg)}30%,50%,70%,90%{-webkit-transform:scale3d(1, 1, 1) rotate3d(0, 0, 1, 10deg);transform:scale3d(1, 1, 1) rotate3d(0, 0, 1, 10deg)}40%,60%,80%{-webkit-transform:scale3d(1, 1, 1) rotate3d(0, 0, 1, -10deg);transform:scale3d(1, 1, 1) rotate3d(0, 0, 1, -10deg)}to{-webkit-transform:scale3d(1, 1, 1);transform:scale3d(1, 1, 1)}}</style><link rel="stylesheet" href="assets/css/LineIcons.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="assets/css/LineIcons.css"></noscript>
+
+    <!--====== Magnific Popup css ======-->
+    <style>@media screen and (max-width: 800px) and (orientation: landscape), screen and (max-height: 300px){}</style><link rel="stylesheet" href="assets/css/magnific-popup.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="assets/css/magnific-popup.css"></noscript>
+
+    <!--====== Default css ======-->
+    <link rel="stylesheet" href="assets/css/default.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="assets/css/default.css"></noscript>
+
+    <!--====== Style css ======-->
+    <style>@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800");body{font-family:"Poppins", sans-serif;font-weight:normal;font-style:normal;color:#8a8fa3}*{margin:0;padding:0;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}a:focus{text-decoration:none;outline:none}a:focus,a:hover{text-decoration:none}i,a{display:inline-block}.preloader{position:fixed;top:0;left:0;display:table;height:100%;width:100%;background:#fff;z-index:99999}.preloader .loader_34{display:table-cell;vertical-align:middle;text-align:center}.preloader .loader_34 .ytp-spinner{position:absolute;left:50%;top:50%;width:64px;margin-left:-32px;z-index:18;pointer-events:none}.preloader .loader_34 .ytp-spinner .ytp-spinner-container{pointer-events:none;position:absolute;width:100%;padding-bottom:100%;top:50%;left:50%;margin-top:-50%;margin-left:-50%;-webkit-animation:ytp-spinner-linspin 1568.23529647ms linear infinite;-moz-animation:ytp-spinner-linspin 1568.23529647ms linear infinite;-o-animation:ytp-spinner-linspin 1568.23529647ms linear infinite;animation:ytp-spinner-linspin 1568.23529647ms linear infinite}.preloader .loader_34 .ytp-spinner .ytp-spinner-container .ytp-spinner-rotator{position:absolute;width:100%;height:100%;-webkit-animation:ytp-spinner-easespin 5332ms cubic-bezier(0.4, 0, 0.2, 1) infinite both;-moz-animation:ytp-spinner-easespin 5332ms cubic-bezier(0.4, 0, 0.2, 1) infinite both;-o-animation:ytp-spinner-easespin 5332ms cubic-bezier(0.4, 0, 0.2, 1) infinite both;animation:ytp-spinner-easespin 5332ms cubic-bezier(0.4, 0, 0.2, 1) infinite both}.preloader .loader_34 .ytp-spinner .ytp-spinner-container .ytp-spinner-rotator .ytp-spinner-left{position:absolute;top:0;left:0;bottom:0;overflow:hidden;right:50%}.preloader .loader_34 .ytp-spinner .ytp-spinner-container .ytp-spinner-rotator .ytp-spinner-right{position:absolute;top:0;right:0;bottom:0;overflow:hidden;left:50%}.preloader .loader_34 .ytp-spinner-circle{box-sizing:border-box;position:absolute;width:200%;height:100%;border-style:solid;border-color:#0e204e #0e204e #ddd;border-radius:50%;border-width:6px}.preloader .loader_34 .ytp-spinner-left .ytp-spinner-circle{left:0;right:-100%;border-right-color:#ddd;-webkit-animation:ytp-spinner-left-spin 1333ms cubic-bezier(0.4, 0, 0.2, 1) infinite both;-moz-animation:ytp-spinner-left-spin 1333ms cubic-bezier(0.4, 0, 0.2, 1) infinite both;-o-animation:ytp-spinner-left-spin 1333ms cubic-bezier(0.4, 0, 0.2, 1) infinite both;animation:ytp-spinner-left-spin 1333ms cubic-bezier(0.4, 0, 0.2, 1) infinite both}.preloader .loader_34 .ytp-spinner-right .ytp-spinner-circle{left:-100%;right:0;border-left-color:#ddd;-webkit-animation:ytp-right-spin 1333ms cubic-bezier(0.4, 0, 0.2, 1) infinite both;-moz-animation:ytp-right-spin 1333ms cubic-bezier(0.4, 0, 0.2, 1) infinite both;-o-animation:ytp-right-spin 1333ms cubic-bezier(0.4, 0, 0.2, 1) infinite both;animation:ytp-right-spin 1333ms cubic-bezier(0.4, 0, 0.2, 1) infinite both}@-webkit-keyframes ytp-spinner-linspin{to{-webkit-transform:rotate(360deg);-moz-transform:rotate(360deg);-ms-transform:rotate(360deg);-o-transform:rotate(360deg);transform:rotate(360deg)}}@keyframes ytp-spinner-linspin{to{-webkit-transform:rotate(360deg);-moz-transform:rotate(360deg);-ms-transform:rotate(360deg);-o-transform:rotate(360deg);transform:rotate(360deg)}}@-webkit-keyframes ytp-spinner-easespin{12.5%{-webkit-transform:rotate(135deg);-moz-transform:rotate(135deg);-ms-transform:rotate(135deg);-o-transform:rotate(135deg);transform:rotate(135deg)}25%{-webkit-transform:rotate(270deg);-moz-transform:rotate(270deg);-ms-transform:rotate(270deg);-o-transform:rotate(270deg);transform:rotate(270deg)}37.5%{-webkit-transform:rotate(405deg);-moz-transform:rotate(405deg);-ms-transform:rotate(405deg);-o-transform:rotate(405deg);transform:rotate(405deg)}50%{-webkit-transform:rotate(540deg);-moz-transform:rotate(540deg);-ms-transform:rotate(540deg);-o-transform:rotate(540deg);transform:rotate(540deg)}62.5%{-webkit-transform:rotate(675deg);-moz-transform:rotate(675deg);-ms-transform:rotate(675deg);-o-transform:rotate(675deg);transform:rotate(675deg)}75%{-webkit-transform:rotate(810deg);-moz-transform:rotate(810deg);-ms-transform:rotate(810deg);-o-transform:rotate(810deg);transform:rotate(810deg)}87.5%{-webkit-transform:rotate(945deg);-moz-transform:rotate(945deg);-ms-transform:rotate(945deg);-o-transform:rotate(945deg);transform:rotate(945deg)}to{-webkit-transform:rotate(1080deg);-moz-transform:rotate(1080deg);-ms-transform:rotate(1080deg);-o-transform:rotate(1080deg);transform:rotate(1080deg)}}@keyframes ytp-spinner-easespin{12.5%{-webkit-transform:rotate(135deg);-moz-transform:rotate(135deg);-ms-transform:rotate(135deg);-o-transform:rotate(135deg);transform:rotate(135deg)}25%{-webkit-transform:rotate(270deg);-moz-transform:rotate(270deg);-ms-transform:rotate(270deg);-o-transform:rotate(270deg);transform:rotate(270deg)}37.5%{-webkit-transform:rotate(405deg);-moz-transform:rotate(405deg);-ms-transform:rotate(405deg);-o-transform:rotate(405deg);transform:rotate(405deg)}50%{-webkit-transform:rotate(540deg);-moz-transform:rotate(540deg);-ms-transform:rotate(540deg);-o-transform:rotate(540deg);transform:rotate(540deg)}62.5%{-webkit-transform:rotate(675deg);-moz-transform:rotate(675deg);-ms-transform:rotate(675deg);-o-transform:rotate(675deg);transform:rotate(675deg)}75%{-webkit-transform:rotate(810deg);-moz-transform:rotate(810deg);-ms-transform:rotate(810deg);-o-transform:rotate(810deg);transform:rotate(810deg)}87.5%{-webkit-transform:rotate(945deg);-moz-transform:rotate(945deg);-ms-transform:rotate(945deg);-o-transform:rotate(945deg);transform:rotate(945deg)}to{-webkit-transform:rotate(1080deg);-moz-transform:rotate(1080deg);-ms-transform:rotate(1080deg);-o-transform:rotate(1080deg);transform:rotate(1080deg)}}@-webkit-keyframes ytp-spinner-left-spin{0%{-webkit-transform:rotate(130deg);-moz-transform:rotate(130deg);-ms-transform:rotate(130deg);-o-transform:rotate(130deg);transform:rotate(130deg)}50%{-webkit-transform:rotate(-5deg);-moz-transform:rotate(-5deg);-ms-transform:rotate(-5deg);-o-transform:rotate(-5deg);transform:rotate(-5deg)}to{-webkit-transform:rotate(130deg);-moz-transform:rotate(130deg);-ms-transform:rotate(130deg);-o-transform:rotate(130deg);transform:rotate(130deg)}}@keyframes ytp-spinner-left-spin{0%{-webkit-transform:rotate(130deg);-moz-transform:rotate(130deg);-ms-transform:rotate(130deg);-o-transform:rotate(130deg);transform:rotate(130deg)}50%{-webkit-transform:rotate(-5deg);-moz-transform:rotate(-5deg);-ms-transform:rotate(-5deg);-o-transform:rotate(-5deg);transform:rotate(-5deg)}to{-webkit-transform:rotate(130deg);-moz-transform:rotate(130deg);-ms-transform:rotate(130deg);-o-transform:rotate(130deg);transform:rotate(130deg)}}@-webkit-keyframes ytp-right-spin{0%{-webkit-transform:rotate(-130deg);-moz-transform:rotate(-130deg);-ms-transform:rotate(-130deg);-o-transform:rotate(-130deg);transform:rotate(-130deg)}50%{-webkit-transform:rotate(5deg);-moz-transform:rotate(5deg);-ms-transform:rotate(5deg);-o-transform:rotate(5deg);transform:rotate(5deg)}to{-webkit-transform:rotate(-130deg);-moz-transform:rotate(-130deg);-ms-transform:rotate(-130deg);-o-transform:rotate(-130deg);transform:rotate(-130deg)}}@keyframes ytp-right-spin{0%{-webkit-transform:rotate(-130deg);-moz-transform:rotate(-130deg);-ms-transform:rotate(-130deg);-o-transform:rotate(-130deg);transform:rotate(-130deg)}50%{-webkit-transform:rotate(5deg);-moz-transform:rotate(5deg);-ms-transform:rotate(5deg);-o-transform:rotate(5deg);transform:rotate(5deg)}to{-webkit-transform:rotate(-130deg);-moz-transform:rotate(-130deg);-ms-transform:rotate(-130deg);-o-transform:rotate(-130deg);transform:rotate(-130deg)}}.back-to-top{font-size:20px;color:#fff;position:fixed;right:20px;bottom:20px;width:50px;height:50px;line-height:46px;border-radius:50%;border:2px solid #586376;background-color:#152136;text-align:center;z-index:99;-webkit-transition:all 0.3s ease-out 0s;-moz-transition:all 0.3s ease-out 0s;-ms-transition:all 0.3s ease-out 0s;-o-transition:all 0.3s ease-out 0s;transition:all 0.3s ease-out 0s;display:none}.back-to-top:hover{color:#fff;background-color:#0e204e;border-color:#0e204e}</style><link rel="stylesheet" href="assets/css/style.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="assets/css/style.css"></noscript>
+
+
+<link rel="stylesheet" href="styles.ef46db3751d8e999.css"></head>
+
+<body>
+
+    <!--====== PRELOADER PART START ======-->
+
+    
+
+    <!--====== PRELOADER ENDS START ======-->
+
+    <!--====== HEADER PART START ======-->
+
+    <app-root>
+        <div class="preloader">
+            <div class="loader_34">
+                <div class="ytp-spinner">
+                    <div class="ytp-spinner-container">
+                        <div class="ytp-spinner-rotator">
+                            <div class="ytp-spinner-left">
+                                <div class="ytp-spinner-circle"></div>
+                            </div>
+                            <div class="ytp-spinner-right">
+                                <div class="ytp-spinner-circle"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </app-root>
+
+    <!--====== HEADER PART ENDS ======-->
+
+    <!--====== ABOUT PART START ======-->
+
+    
+
+    <!--====== ABOUT PART ENDS ======-->
+
+    <!--====== SERVICES PART START ======-->
+
+    
+
+    <!--====== SERVICES PART ENDS ======-->
+
+    <!--====== CALL TO ACTION PART START ======-->
+
+    
+
+    <!--====== CALL TO ACTION PART ENDS ======-->
+
+    <!--====== WORK PART START ======-->
+
+    
+
+    <!--====== WORK PART ENDS ======-->
+
+    <!--====== PRICING PART START ======-->
+
+    
+
+    <!--====== PRICING PART ENDS ======-->
+
+    <!--====== BLOG PART START ======-->
+
+    
+
+    <!--====== BLOG PART ENDS ======-->
+
+    <!--====== CONTACT PART START ======-->
+
+    
+
+    <!--====== CONTACT PART ENDS ======-->
+
+    <!--====== FOOTER PART START ======-->
+
+    
+
+    <!--====== FOOTER PART ENDS ======-->
+
+    <!--====== BACK TOP TOP PART START ======-->
+
+    <a href="#" class="back-to-top"><i class="lni-chevron-up"></i></a>
+
+    <!--====== BACK TOP TOP PART ENDS ======-->
+
+
+
+
+
+    
+
+<script src="runtime.df4f1c389fbb0cfe.js" type="module"></script><script src="polyfills.05c006605dd123c2.js" type="module"></script><script src="scripts.e5df2191a6a74a91.js" defer></script><script src="main.e5bd36658e35c986.js" type="module"></script>
+
+
+</body></html>
