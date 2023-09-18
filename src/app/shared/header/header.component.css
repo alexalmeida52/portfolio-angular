@@ -1,0 +1,12 @@
+@media(max-width:768px) {
+    .header-image::before {
+        content: none;
+    }
+    .header-image::after {
+        content: none;
+    }
+    .d-min-photo {
+        position: absolute;
+        opacity: 0.2;
+    }
+}

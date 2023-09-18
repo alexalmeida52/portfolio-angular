@@ -1,0 +1,84 @@
+<section id="contact" class="contact-area pt-125 pb-130 gray-bg">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="section-title text-center pb-25">
+                    <h2 class="title">Entrar em contato</h2>
+                    <p>Ficou interessado em algum serviço? Gostaria de tirar alguma dúvida? Segue abaixo meu endereço
+                        de atendimento e contatos. Mas se preferir, pode enviar uma mensagem no formulário logo abaixo.
+                    </p>
+                </div> <!-- section title -->
+            </div>
+        </div> <!-- row -->
+        <div class="row justify-content-center">
+            <div class="col-lg-4 col-md-6 col-sm-7">
+                <div class="contact-box text-center mt-30">
+                    <div class="contact-icon">
+                        <i class="lni-map-marker"></i>
+                    </div>
+                    <div class="contact-content">
+                        <h6 class="contact-title">Endereço</h6>
+                        <p>Av. Cap. Mor Gouveia, 3000 - Lagoa Nova, Natal - RN, 59078-970</p>
+                    </div>
+                </div> <!-- contact box -->
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-7">
+                <div class="contact-box text-center mt-30">
+                    <div class="contact-icon">
+                        <i class="lni-phone"></i>
+                    </div>
+                    <div class="contact-content">
+                        <h6 class="contact-title">Telefone</h6>
+                        <p>+55 (84) 9 8864 9373</p>
+                        <p>+55 (84) 9 8761 7060</p>
+                    </div>
+                </div> <!-- contact box -->
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-7">
+                <div class="contact-box text-center mt-30">
+                    <div class="contact-icon">
+                        <i class="lni-envelope"></i>
+                    </div>
+                    <div class="contact-content">
+                        <h6 class="contact-title">Email</h6>
+                        <p>jhosealex@gmail.com</p>
+                        <p>alexalmeida52@outlook.com</p>
+                    </div>
+                </div> <!-- contact box -->
+            </div>
+        </div> <!-- row -->
+        <div id="contato" class="row">
+            <div class="col-lg-6">
+                <div class="contact-form pt-30">
+                    
+                    <form id="contact-form" action="assets/contact.php">
+                        <div class="single-form">
+                            <input type="text" name="name" id="name" class="teste" [(ngModel)]="data.nome" (blur)="verificarCampos('data.nome')"  [ngClass]="nome ? 'alert-input' : ''"  placeholder="Nome">
+                        </div> <!-- single form -->
+                        <div class="single-form">
+                            <input type="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" (blur)="verificarCampos('data.email')"  class="input-text teste" name="email" [(ngModel)]="data.email" [ngClass]="email ? 'alert-input' : ''" placeholder="Email">
+                        </div> <!-- single form -->
+                        <div class="single-form">
+                            <textarea name="message" id="message" [(ngModel)]="data.mensagem" (blur)="verificarCampos('data.mensagem')" [ngClass]="mensagem ? 'alert-input' : ''" class="teste" placeholder="Mensagem"></textarea>
+                        </div> <!-- single form -->
+                        <p class="form-message"></p>
+                        <div class="single-form">
+                            <button class="main-btn" (click)="enviarMensagem(data)" [ngClass]="nome || email || mensagem ? 'btn btn-outline-danger alert-input' : ''">Enviar Mensagem</button>
+                        </div> <!-- single form -->
+                    </form>
+                </div> <!-- contact form -->
+            </div>
+            <div class="col-lg-6">
+                <div class="contact-map mt-60">
+                    <div class="gmap_canvas">
+                        <iframe id="gmap_canvas" src="https://maps.google.com/maps?width=100%&height=600&hl=en&coord=-5.8459029, -35.2015736&q=IMD%20-%20Instituto%20Metrop%C3%B3le%20Digital%20-%20Lagoa%20Nova%2C%20Natal%20-%20RN%2C%2059076-560+(Endere%C3%A7o)&ie=UTF8&t=&z=14&iwloc=B&output=embed" frameborder="0" scrolling="no" marginheight="0"
+                            marginwidth="0"></iframe>
+                    </div>
+                </div> <!-- contact map -->
+            </div>
+        </div> <!-- row -->
+    </div> <!-- container -->
+</section>
+<!-- The actual snackbar -->
+<div id="snackbar" class="snackbar">Mensagem enviada...</div>
+<div id="erro-snackbar" class="snackbar">Mensagem não enviada...</div>
