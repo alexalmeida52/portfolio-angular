@@ -13,6 +13,21 @@ export class PortfolioComponent implements OnInit {
   menos: boolean = false;
   worksAll: any = [
     {
+      image: "assets/images/work/accenture.JPG",
+      link: "https://www.accenture.com/br-pt",
+      nome: "Accenture"
+    },
+    {
+      image: "assets/images/work/cielo.JPG",
+      link: "https://www.cielo.com.br/",
+      nome: "Cielo | Maquininhas de crédito e débito para você vender mais!"
+    },
+    {
+      image: "assets/images/work/bethehero/incidents.JPG",
+      link: "https://bthehero.herokuapp.com",
+      nome: "Aplicativo Be The Hero"
+    },
+    {
       image: "assets/images/work/bethehero/incidents.JPG",
       link: "https://bthehero.herokuapp.com",
       nome: "Aplicativo Be The Hero"

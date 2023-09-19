@@ -718,7 +718,7 @@ p {
     content: '';
     width: 100%;
     height: 82%;
-    border: 20px solid #0e204e;
+    /* border: 20px solid #0e204e; */
     border-bottom: 0;
     top: 50%;
     left: 0;
@@ -732,7 +732,7 @@ p {
     content: '';
     width: 100%;
     height: 20px;
-    background-color: #0e204e;
+    /* background-color: #0e204e; */
     left: 0;
     bottom: 58px;
     z-index: 11; }
