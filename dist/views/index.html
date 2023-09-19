@@ -8,17 +8,6 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.dev.js"></script>
      <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-     <script>
-          $( document ).ready(function() {
-        // Handler for .ready() called.
-            
-            var socket = io('http://alexalves.herokuapp.com/');
-            socket.on('visitas', function(visitas){
-                console.log(visitas);
-                $('#visitas').text('Total de visitas: '+visitas);
-            });
-        });
-     </script>
     <!--====== Title ======-->
     <title>Alex - Desenvolvedor Full Stack</title>
 
