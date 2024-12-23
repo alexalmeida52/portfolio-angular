@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: teste-app
+spec:
+  selector:
+    matchLabels:
+      app: teste-app
+  template:
+    metadata:
+      labels:
+        app: teste-app
+    spec:
+      containers:
+      - name: teste-app
+        image: teste-app
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 80
