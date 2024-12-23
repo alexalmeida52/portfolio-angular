@@ -10,13 +10,17 @@ jobs:
       - name: checkout
         uses: actions/checkout@v2
 
+      - name: get-npm-version
+        id: package-version
+        uses: martinbeentjes/npm-get-version-action@master
+
       - name: build image and push to docker hub
         uses: docker/build-push-action@v1.1.0
         with:
           username: alxdev52
           password: ${{ secrets.DOCKER_PASSWORD }}
           repository: alxdev52/portfolio
-          tags: ${{ github.sha }}, latest
+          tags: ${{ steps.package-version.outputs.current-version }}, latest
   deploy:
     name: Deploy
     runs-on: ubuntu-latest
@@ -24,6 +28,10 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v2
+
+      - name: get-npm-version
+        id: package-version
+        uses: martinbeentjes/npm-get-version-action@master
       
       - name: kustomize
         uses: imranismail/setup-kustomize@v1
@@ -32,13 +40,13 @@ jobs:
         
       - name: update k8s
         run: |
-          kustomize edit set image portfolio=alxdev52/portfolio:${{ github.sha }}
+          kustomize edit set image portfolio=alxdev52/portfolio:${{ steps.package-version.outputs.current-version }}
           cat kustomization.yaml
 
       - name: commit
         run: |
-          git config --global user.email "automation_bot@github.com"
-          git config --global user.name "automation bot"
+          git config --global user.email "action@github.com"
+          git config --global user.name "Deploy Action"
           git commit -am "change image tag"
 
       - name: push
