@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: teste-app
+  name: portfolio
 spec:
   selector:
     matchLabels:
-      app: teste-app
+      app: portfolio
   template:
     metadata:
       labels:
-        app: teste-app
+        app: portfolio
     spec:
       containers:
-      - name: teste-app
-        image: teste-app
+      - name: portfolio
+        image: portfolio
         resources:
           limits:
             memory: "128Mi"

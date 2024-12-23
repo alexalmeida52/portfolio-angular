@@ -5,9 +5,9 @@ resources:
   - deployment.yaml
   - service.yaml
 
-namespace: default
+namespace: portfolio
 
 images:
-  - name: teste-app
-    newName: alxdev52/teste-app
-    newTag: v1
+  - name: portfolio
+    newName: alxdev52/portfolio
+    newTag: 1.0.0
