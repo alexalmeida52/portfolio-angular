@@ -10,4 +10,4 @@ namespace: portfolio
 images:
 - name: portfolio
   newName: alxdev52/portfolio
-  newTag: 0.0.0
+  newTag: 1.0.0-SNAPSHOT
