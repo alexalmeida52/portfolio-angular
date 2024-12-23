@@ -2,12 +2,12 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 resources:
-  - deployment.yaml
-  - service.yaml
+- deployment.yaml
+- service.yaml
 
 namespace: portfolio
 
 images:
-  - name: portfolio
-    newName: alxdev52/portfolio
-    newTag: 1.0.0
+- name: portfolio
+  newName: alxdev52/portfolio
+  newTag: 0.0.0
