@@ -63,3 +63,4 @@ Requisitos
 - MicroK8s: Para executar o Kubernetes localmente.
 - kubectl: Para interagir com o cluster Kubernetes.
 - ArgoCD: Para automação do deploy no Kubernetes.
+- 
