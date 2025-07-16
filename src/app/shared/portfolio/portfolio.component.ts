@@ -13,14 +13,19 @@ export class PortfolioComponent implements OnInit {
   menos: boolean = false;
   worksAll: any = [
     {
-      image: "assets/images/work/accenture.JPG",
-      link: "https://www.accenture.com/br-pt",
-      nome: "Accenture"
+      image: "assets/images/work/aircnc/login.JPG",
+      link: "#",
+      nome: "Aircnc"
     },
     {
-      image: "assets/images/work/cielo.JPG",
-      link: "https://www.cielo.com.br/",
-      nome: "Cielo | Maquininhas de crédito e débito para você vender mais!"
+      image: "assets/images/work/aircnc/new.JPG",
+      link: "#",
+      nome: "Aircnc"
+    },
+    {
+      image: "assets/images/work/aircnc/site.JPG",
+      link: "#",
+      nome: "Aircnc"
     },
     {
       image: "assets/images/work/bethehero/incidents.JPG",
